@@ -4,11 +4,10 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import EslintPlugin from 'vite-plugin-eslint'
 
-import { loadEnv } from './scripts/loadEnv'
+import { loadEnv } from './scripts/loadEnv.js'
 
 // 当前根目录
 const root = process.cwd()
-
 function pathResolve(dir) {
   return resolve(root, '.', dir)
 }
@@ -22,7 +21,7 @@ export default async ({ mode }) => {
       vueJsx(),
       EslintPlugin({
         cache: false,
-        include: ['src/**/*.js', 'src/**/*.jsx', 'src/**/*.vue'], // 检查的文件
+        include: ['src/**/*.ts', 'src/**/*.js', 'src/**/*.jsx', 'src/**/*.vue'], // 检查的文件
         failOnError: true,
         failOnWarning: false,
         emitError: true,

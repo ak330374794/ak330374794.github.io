@@ -11,11 +11,10 @@ export function loadEnv(mode) {
     return it === 'NODE_ENV' || it.indexOf('WEB_') !== -1
   })
   for (const envName of newKeys) {
-    let realName = process.env[envName].replace(/\\n/g, '\n')
+    let realName = process.env[envName]?.replace(/\\n/g, '\n')
     // 转换boolean
-    realName = realName === 'true' ? true : realName === 'false' ? false : realName
-    const tmpName = realName
-    ret[envName] = realName
+    ret[envName] = realName === 'true' ? true : realName === 'false' ? false : realName
+    //const tmpName = tOf
   }
   return ret
 }
