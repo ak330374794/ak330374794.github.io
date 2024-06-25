@@ -1,25 +1,59 @@
 {
-  "name": "guesspassword",
-  "version": "0.1.0",
+  "name": "vue3-vite-ts-element",
+  "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "keywords": [
+    "vue3",
+    "vite",
+    "pinia",
+    "element-plus"
+  ],
+  "engines": {
+    "node": ">= 14.18.0",
+    "pnpm": ">= 7.4.0"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "dev": "vite --mode dev",
+    "build:dev": "vite build --mode dev",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^3.2.13",
-    "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "@element-plus/icons-vue": "^2.3.1",
+    "async-validator": "^4.2.5",
+    "dayjs": "^1.11.11",
+    "element-plus": "^2.7.1",
+    "file-saver": "^2.0.5",
+    "lodash-es": "^4.17.21",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persist": "^1.0.0",
+    "vite-plugin-html": "^3.2.2",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-router": "~5.0.0",
-    "@vue/cli-plugin-typescript": "~5.0.0",
-    "@vue/cli-plugin-vuex": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
-    "sass": "^1.32.7",
-    "sass-loader": "^12.0.0",
-    "typescript": "~4.5.5"
+    "@rushstack/eslint-patch": "^1.3.3",
+    "@tsconfig/node20": "^20.1.2",
+    "@types/node": "^20.11.28",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "@vue/eslint-config-typescript": "^12.0.0",
+    "@vue/tsconfig": "^0.5.1",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-define-config": "^2.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-sonarjs": "^0.18.0",
+    "eslint-plugin-vue": "^9.10.0",
+    "npm-run-all2": "^6.1.2",
+    "prettier": "^2.8.8",
+    "typescript": "~5.4.0",
+    "vite": "^5.1.6",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^2.0.6"
   }
 }
