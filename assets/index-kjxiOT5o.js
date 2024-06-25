@@ -1,1 +1,0 @@
-import{d as o,c as s,a as l,u as a,o as e}from"./index-B3kuVxAO.js";const n={class:"halloword"},t=l("h1",null,"halloword",-1),d=l("div",null,"97868767896",-1),u=o({__name:"index",setup(o){console.log("test");const u=a(),c=()=>{console.log("go about"),u.push({name:"home"})};return(o,a)=>(e(),s("div",n,[t,d,l("div",{onClick:c},"回到首页")]))}});export{u as default};
