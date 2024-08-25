@@ -10,8 +10,8 @@
     "element-plus"
   ],
   "engines": {
-    "node": ">= 18.16.1",
-    "pnpm": ">= 9.0.5"
+    "node": ">= 20.16.0",
+    "pnpm": ">= 9.8.0"
   },
   "scripts": {
     "dev": "vite --mode dev",
