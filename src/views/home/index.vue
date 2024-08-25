@@ -5,6 +5,7 @@
 
       <div class="wrapper">
         <HelloWorld msg="You did it!" />
+        <div>服务</div>
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>

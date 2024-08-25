@@ -32,10 +32,10 @@ export default async ({ mode }) => {
       extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.less', '.css', '.scss', '.vue'],
       alias: [
         // 设置别名
-        {
+        /*{
           find: 'vue-i18n',
           replacement: 'vue-i18n/dist/vue-i18n.cjs.js',
-        },
+        },*/
         {
           find: '@',
           replacement: `${pathResolve('src')}`,

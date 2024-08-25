@@ -1,14 +1,19 @@
 {
   "extends": "@tsconfig/node20/tsconfig.json",
   "include": [
-    "vite.config.*",
+    "vite.config.js",
     "src/**/*.ts",
-    "src/**/*.js"
+    "src/**/*.js",
+    "src/**/*.vue",
+    "scripts/**/*.js",
   ],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "composite": true,
     "noEmit": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
     "allowJs": true,
     "module": "ESNext",
