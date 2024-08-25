@@ -15,8 +15,8 @@
   },
   "scripts": {
     "dev": "vite --mode dev",
-    "build:dev": "vite build --mode dev",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "vite build --mode dev",
+    "build:check": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
