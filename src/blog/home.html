@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Minimalist Folio - 首页</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+<style>
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animate-gradient {
+            background: linear-gradient(-45deg, #f3f4f6, #e5e7eb, #d1d5db, #f9fafb);
+            background-size: 400% 400%;
+            animation: gradientFlow 15s ease infinite;
+        }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.8); }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 font-sans selection:bg-emerald-100 selection:text-emerald-900">
+<!-- 导航栏 -->
+<nav class="fixed top-0 w-full z-50 transition-all duration-300 py-6" id="navbar">
+<div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+<a class="text-2xl font-bold tracking-tighter text-slate-900 flex items-center gap-2" href="home.html">
+<span class="w-8 h-8 bg-slate-900 rounded-full flex items-center justify-center text-white text-sm">M</span>
+                FOLIO.
+            </a>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="text-slate-900 border-b-2 border-slate-900" href="home.html">首页</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="articles.html">文章</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="archive.html">归档</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="tags.html">标签</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="guestbook.html">留言</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="about.html">关于</a>
+</div>
+<button class="md:hidden text-2xl">
+<iconify-icon icon="line-md:menu"></iconify-icon>
+</button>
+</div>
+</nav>
+<!-- Hero 区域 -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden animate-gradient">
+<div class="max-w-6xl mx-auto px-6 relative z-10">
+<div class="max-w-3xl">
+<span class="inline-block py-1 px-3 rounded-full bg-white/50 text-xs font-bold tracking-widest uppercase mb-6 reveal">Welcome to my space</span>
+<h1 class="text-6xl md:text-8xl font-bold tracking-tight text-slate-900 leading-tight mb-8 reveal">
+                    思考、记录与<br/><span class="text-emerald-600">创造的边界</span>
+</h1>
+<p class="text-xl text-slate-600 mb-10 leading-relaxed reveal" style="transition-delay: 0.1s;">
+                    我是 Alex，一名开发者与数字游民。这里是我记录技术探索、设计思考以及生活琐碎的角落。追求极简，忠于纯粹。
+                </p>
+<div class="flex flex-wrap gap-4 reveal" style="transition-delay: 0.2s;">
+<a class="px-8 py-4 bg-slate-900 text-white rounded-full font-medium hover:bg-slate-800 transition-all hover:shadow-lg hover:-translate-y-1" href="articles.html">浏览文章</a>
+<a class="px-8 py-4 bg-white border border-slate-200 text-slate-900 rounded-full font-medium hover:bg-gray-50 transition-all" href="about.html">了解更多</a>
+</div>
+</div>
+</div>
+<!-- 装饰图形 -->
+<div class="absolute right-0 bottom-0 w-1/3 h-2/3 bg-white/20 rounded-tl-full blur-3xl -z-0"></div>
+</section>
+<!-- 站点数据展示 -->
+<section class="py-20 bg-white border-y border-gray-100">
+<div class="max-w-6xl mx-auto px-6">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="text-center reveal">
+<div class="text-4xl font-bold text-slate-900 mb-2 counter" data-target="42">0</div>
+<div class="text-sm text-slate-500 uppercase tracking-widest">文章总数</div>
+</div>
+<div class="text-center reveal" style="transition-delay: 0.1s;">
+<div class="text-4xl font-bold text-slate-900 mb-2 counter" data-target="15">0</div>
+<div class="text-sm text-slate-500 uppercase tracking-widest">分类标签</div>
+</div>
+<div class="text-center reveal" style="transition-delay: 0.2s;">
+<div class="text-4xl font-bold text-slate-900 mb-2 counter" data-target="1280">0</div>
+<div class="text-sm text-slate-500 uppercase tracking-widest">建站天数</div>
+</div>
+<div class="text-center reveal" style="transition-delay: 0.3s;">
+<div class="text-4xl font-bold text-slate-900 mb-2 counter" data-target="85">0</div>
+<div class="text-sm text-slate-500 uppercase tracking-widest">访客留言</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 精选文章 -->
+<section class="py-32">
+<div class="max-w-6xl mx-auto px-6">
+<div class="flex justify-between items-end mb-16 reveal">
+<div>
+<h2 class="text-4xl font-bold text-slate-900 mb-4">精选文章</h2>
+<p class="text-slate-500">挑选了一些深度思考与技术总结</p>
+</div>
+<a class="text-slate-900 font-medium flex items-center gap-2 group" href="articles.html">
+                    查看全部 <iconify-icon class="group-hover:translate-x-1 transition-transform" icon="line-md:arrow-right"></iconify-icon>
+</a>
+</div>
+<div class="grid md:grid-cols-3 gap-10">
+<!-- 文章卡片 1 -->
+<div class="group reveal">
+<div class="relative overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
+<img alt="Minimalist workspace with a laptop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/agent-py/static/source/images/placeholder.svg"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-wider rounded-full">Design</span>
+</div>
+</div>
+<div class="text-xs text-slate-400 mb-3">2026年5月12日</div>
+<h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">
+<a href="article.html">重塑极简主义：数字时代下的减法设计</a>
+</h3>
+<p class="text-slate-500 text-sm line-clamp-2 leading-relaxed">
+                        探讨在信息过载的当下，我们如何通过设计语言的克制来重新获得专注力。
+                    </p>
+</div>
+<!-- 文章卡片 2 -->
+<div class="group reveal" style="transition-delay: 0.1s;">
+<div class="relative overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
+<img alt="Abstract architectural geometric lines" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/agent-py/static/source/images/placeholder.svg"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-wider rounded-full">Tech</span>
+</div>
+</div>
+<div class="text-xs text-slate-400 mb-3">2026年4月28日</div>
+<h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">
+<a href="article.html">为什么你应该开始构建个人数字花园？</a>
+</h3>
+<p class="text-slate-500 text-sm line-clamp-2 leading-relaxed">
+                        从传统的博客到数字花园的转变，意味着知识体系从线性输出变为网状生长。
+                    </p>
+</div>
+<!-- 文章卡片 3 -->
+<div class="group reveal" style="transition-delay: 0.2s;">
+<div class="relative overflow-hidden rounded-2xl mb-6 aspect-[4/3]">
+<img alt="Calm ocean waves at sunset" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="/agent-py/static/source/images/placeholder.svg"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-wider rounded-full">Life</span>
+</div>
+</div>
+<div class="text-xs text-slate-400 mb-3">2026年3月15日</div>
+<h3 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">
+<a href="article.html">在里斯本的三个月：远程工作的真实体验</a>
+</h3>
+<p class="text-slate-500 text-sm line-clamp-2 leading-relaxed">
+                        告别办公室后的生活并非全是阳光沙滩，更多的是关于自律与孤独的平衡。
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 最新文章列表 -->
+<section class="py-24 bg-slate-900 text-white">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="text-3xl font-bold mb-12 reveal">最新发布</h2>
+<div class="space-y-12">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 reveal group">
+<div>
+<span class="text-slate-500 text-sm block mb-2 font-mono">2026.06.10</span>
+<h3 class="text-2xl font-medium group-hover:text-emerald-400 transition-colors"><a href="article.html">深入浅出 Tailwind CSS 性能优化技巧</a></h3>
+</div>
+<a class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center group-hover:bg-emerald-400 group-hover:border-emerald-400 group-hover:text-slate-900 transition-all" href="article.html">
+<iconify-icon icon="line-md:arrow-right"></iconify-icon>
+</a>
+</div>
+<div class="border-t border-slate-800 pt-12 flex flex-col md:flex-row md:items-center justify-between gap-4 reveal group" style="transition-delay: 0.1s;">
+<div>
+<span class="text-slate-500 text-sm block mb-2 font-mono">2026.05.25</span>
+<h3 class="text-2xl font-medium group-hover:text-emerald-400 transition-colors"><a href="article.html">如何利用 AI 提升日常开发工作流效率</a></h3>
+</div>
+<a class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center group-hover:bg-emerald-400 group-hover:border-emerald-400 group-hover:text-slate-900 transition-all" href="article.html">
+<iconify-icon icon="line-md:arrow-right"></iconify-icon>
+</a>
+</div>
+<div class="border-t border-slate-800 pt-12 flex flex-col md:flex-row md:items-center justify-between gap-4 reveal group" style="transition-delay: 0.2s;">
+<div>
+<span class="text-slate-500 text-sm block mb-2 font-mono">2026.05.02</span>
+<h3 class="text-2xl font-medium group-hover:text-emerald-400 transition-colors"><a href="article.html">我的 2026 年桌面装备清单（EDC）</a></h3>
+</div>
+<a class="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center group-hover:bg-emerald-400 group-hover:border-emerald-400 group-hover:text-slate-900 transition-all" href="article.html">
+<iconify-icon icon="line-md:arrow-right"></iconify-icon>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 页脚 -->
+<footer class="py-20 bg-white border-t border-gray-100">
+<div class="max-w-6xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="text-center md:text-left">
+<div class="text-xl font-bold text-slate-900 mb-4 tracking-tighter">FOLIO.</div>
+<p class="text-slate-400 text-sm">© 2026 Alex. All rights reserved.</p>
+</div>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white transition-all" href="#">
+<iconify-icon icon="line-md:github-loop"></iconify-icon>
+</a>
+<a class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white transition-all" href="#">
+<iconify-icon icon="line-md:twitter-x"></iconify-icon>
+</a>
+<a class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white transition-all" href="#">
+<iconify-icon icon="line-md:email"></iconify-icon>
+</a>
+<a class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-slate-400 hover:bg-slate-900 hover:text-white transition-all" href="#">
+<iconify-icon icon="line-md:rss"></iconify-icon>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav', 'py-4', 'shadow-sm');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('glass-nav', 'py-4', 'shadow-sm');
+                navbar.classList.add('py-6');
+            }
+        });
+
+        // 滚动揭示动画
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // 如果是计数器，启动数字动画
+                    if (entry.target.querySelector('.counter')) {
+                        startCounters(entry.target);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 数字增加动画
+        function startCounters(container) {
+            const counters = container.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+
+                const updateCount = () => {
+                    current += increment;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        }
+    </script>
+</body>
+</html>

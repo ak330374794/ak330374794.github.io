@@ -1,35 +1,70 @@
-import { createRouter, createWebHistory } from 'vue-router'
-//import HomeView from '../views/home/index.vue'
+import { createRouter, createWebHashHistory } from 'vue-router'
+import AboutView from '../views/about/index.vue'
+import ArchiveView from '../views/archive/index.vue'
+import ArticleView from '../views/article/index.vue'
+import ArticlesView from '../views/articles/index.vue'
+import HomeView from '../views/home/index.vue'
+import TagsView from '../views/tags/index.vue'
 
 export const routes = [
   {
     path: '/',
+    redirect: '/home.html',
+  },
+  {
+    path: '/home.html',
     name: 'home',
-    component: () => import('../views/home/index.vue'),
+    component: HomeView,
+  },
+  {
+    path: '/articles.html',
+    name: 'articles',
+    component: ArticlesView,
+  },
+  {
+    path: '/article/:slug.html',
+    name: 'article',
+    component: ArticleView,
+  },
+  {
+    path: '/archive.html',
+    name: 'archive',
+    component: ArchiveView,
+  },
+  {
+    path: '/tags.html',
+    name: 'tags',
+    component: TagsView,
+  },
+  {
+    path: '/guestbook.html',
+    redirect: '/about.html',
+  },
+  {
+    path: '/about.html',
+    name: 'about',
+    component: AboutView,
   },
   {
     path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/about/index.vue'),
+    redirect: '/about.html',
   },
   {
     path: '/test',
-    name: 'test',
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/test/index.vue'),
+    redirect: '/articles.html',
+  },
+  {
+    path: '/csstest',
+    redirect: '/archive.html',
   },
 ]
 
-// 创建路由实例
-
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
+  scrollBehavior() {
+    return { top: 0, behavior: 'smooth' }
+  },
 })
 
 export default router

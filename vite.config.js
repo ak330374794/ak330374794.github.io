@@ -5,6 +5,17 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import EslintPlugin from 'vite-plugin-eslint'
 
 import { loadEnv } from './scripts/loadEnv.js'
+import { rm } from 'fs/promises';
+
+// 删除dist目录的函数
+async function cleanDist() {
+  try {
+    await rm('dist', { recursive: true, force: true });
+    console.log('Dist directory has been cleaned.');
+  } catch (error) {
+    console.error('Error cleaning dist directory:', error);
+  }
+}
 
 // 当前根目录
 const root = process.cwd()
@@ -13,6 +24,7 @@ function pathResolve(dir) {
 }
 
 export default async ({ mode }) => {
+  //cleanDist()
   const env = loadEnv(mode)
   return defineConfig({
     base: env.WEB_BASE_PATH,
@@ -47,6 +59,7 @@ export default async ({ mode }) => {
       //proxy: generateProxyTable(),
       host: '0.0.0.0',
       hmr: true,
+      open: true
     },
     build: {
       minify: 'terser',

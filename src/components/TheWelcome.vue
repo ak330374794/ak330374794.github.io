@@ -67,7 +67,7 @@
     <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
   </WelcomeItem>
 </template>
-<script setup lang="ts">
+<script setup>
 import WelcomeItem from './WelcomeItem.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
 import ToolingIcon from './icons/IconTooling.vue'

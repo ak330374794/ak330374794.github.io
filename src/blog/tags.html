@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>标签分类 - Minimalist Folio</title>
+<script src="https://modao.cc/agent-py/static/source/js/tailwindcss.js"></script>
+<script src="https://modao.cc/agent-py/static/source/js/iconify-icon.min.js"></script>
+<style>
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.8); }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .tag-pill { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer; }
+        .tag-pill:hover { transform: translateY(-2px) scale(1.05); }
+        .tag-active { background-color: #1e293b !important; color: white !important; border-color: #1e293b !important; }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 font-sans">
+<!-- 导航栏 -->
+<nav class="fixed top-0 w-full z-50 glass-nav py-4 shadow-sm" id="navbar">
+<div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+<a class="text-2xl font-bold tracking-tighter text-slate-900" href="home.html">FOLIO.</a>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="home.html">首页</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="articles.html">文章</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="archive.html">归档</a>
+<a class="text-slate-900 border-b-2 border-slate-900" href="tags.html">标签</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="guestbook.html">留言</a>
+<a class="text-slate-500 hover:text-slate-900 transition-colors" href="about.html">关于</a>
+</div>
+<button class="md:hidden text-2xl">
+<iconify-icon icon="line-md:menu"></iconify-icon>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-24">
+<div class="max-w-4xl mx-auto px-6">
+<header class="text-center mb-20 reveal active">
+<h1 class="text-5xl font-bold text-slate-900 mb-6">标签云</h1>
+<p class="text-slate-500">发现感兴趣的话题。点击标签进行筛选。</p>
+</header>
+<!-- 标签云 -->
+<div class="flex flex-wrap justify-center gap-4 mb-24 reveal active" style="transition-delay: 0.1s;">
+<button class="tag-pill tag-active px-6 py-2.5 rounded-full border border-slate-200 bg-white text-slate-600 font-medium text-sm" onclick="filterTag('All', this)">全部 (42)</button>
+<button class="tag-pill px-6 py-2.5 rounded-full border border-slate-200 bg-white text-slate-600 font-medium text-lg" onclick="filterTag('Tech', this)">Tech (15)</button>
+<button class="tag-pill px-6 py-2.5 rounded-full border border-slate-200 bg-white text-slate-600 font-medium text-2xl" onclick="filterTag('Design', this)">Design (12)</button>
+<button class="tag-pill px-6 py-2.5 rounded-full border border-slate-200 bg-white text-slate-600 font-medium text-base" onclick="filterTag('Life', this)">Life (8)</button>
+<button class="tag-pill px-6 py-2.5 rounded-full border border-slate-200 bg-white text-slate-600 font-medium text-xl" onclick="filterTag('AI', this)">AI (5)</button>
+<button class="tag-pill px-6 py-2.5 rounded-full border border-slate-200 bg-white text-slate-600 font-medium text-sm" onclick="filterTag('Minimalism', this)">Minimalism (7)</button>
+<button class="tag-pill px-6 py-2.5 rounded-full border border-slate-200 bg-white text-slate-600 font-medium text-lg" onclick="filterTag('Web', this)">Web (10)</button>
+<button class="tag-pill px-6 py-2.5 rounded-full border border-slate-200 bg-white text-slate-600 font-medium text-sm" onclick="filterTag('Productivity', this)">Productivity (4)</button>
+</div>
+<!-- 筛选结果列表 -->
+<div class="space-y-6 reveal active" id="tag-results" style="transition-delay: 0.2s;">
+<h2 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-10" id="current-tag-label">当前展示: 全部文章</h2>
+<div class="article-item group py-8 border-b border-gray-100 flex justify-between items-center" data-category="Tech">
+<div class="max-w-2xl">
+<div class="text-xs text-slate-400 mb-2 font-mono">2026.06.10</div>
+<h3 class="text-2xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors mb-2"><a href="article.html">深入浅出 Tailwind CSS 性能优化技巧</a></h3>
+<p class="text-slate-500 text-sm line-clamp-1">如何在大型项目中保持样式的可维护性，同时最小化最终生成的 CSS 文件体积。</p>
+</div>
+<span class="hidden md:inline-block px-3 py-1 bg-gray-50 text-slate-400 text-[10px] font-bold uppercase rounded">Tech</span>
+</div>
+<div class="article-item group py-8 border-b border-gray-100 flex justify-between items-center" data-category="Design">
+<div class="max-w-2xl">
+<div class="text-xs text-slate-400 mb-2 font-mono">2026.05.12</div>
+<h3 class="text-2xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors mb-2"><a href="article.html">重塑极简主义：数字时代下的减法设计</a></h3>
+<p class="text-slate-500 text-sm line-clamp-1">探讨在信息过载的当下，我们如何通过设计语言的克制来重新获得专注力。</p>
+</div>
+<span class="hidden md:inline-block px-3 py-1 bg-gray-50 text-slate-400 text-[10px] font-bold uppercase rounded">Design</span>
+</div>
+<div class="article-item group py-8 border-b border-gray-100 flex justify-between items-center" data-category="AI">
+<div class="max-w-2xl">
+<div class="text-xs text-slate-400 mb-2 font-mono">2026.05.25</div>
+<h3 class="text-2xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors mb-2"><a href="article.html">如何利用 AI 提升日常开发工作流效率</a></h3>
+<p class="text-slate-500 text-sm line-clamp-1">分享我最近使用的 AI 辅助工具集，以及它们如何改变了我的编码习惯。</p>
+</div>
+<span class="hidden md:inline-block px-3 py-1 bg-gray-50 text-slate-400 text-[10px] font-bold uppercase rounded">AI</span>
+</div>
+<div class="article-item group py-8 border-b border-gray-100 flex justify-between items-center" data-category="Life">
+<div class="max-w-2xl">
+<div class="text-xs text-slate-400 mb-2 font-mono">2026.03.15</div>
+<h3 class="text-2xl font-bold text-slate-900 group-hover:text-emerald-600 transition-colors mb-2"><a href="article.html">在里斯本的三个月：远程工作的真实体验</a></h3>
+<p class="text-slate-500 text-sm line-clamp-1">告别办公室后的生活并非全是阳光沙滩，更多的是关于自律与孤独的平衡。</p>
+</div>
+<span class="hidden md:inline-block px-3 py-1 bg-gray-50 text-slate-400 text-[10px] font-bold uppercase rounded">Life</span>
+</div>
+</div>
+</div>
+</main>
+<!-- 页脚 -->
+<footer class="py-20 bg-white border-t border-gray-100">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<div class="text-xl font-bold text-slate-900 mb-4 tracking-tighter">FOLIO.</div>
+<p class="text-slate-400 text-sm">© 2026 Alex. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        function filterTag(tag, btn) {
+            // 更新按钮状态
+            document.querySelectorAll('.tag-pill').forEach(el => el.classList.remove('tag-active'));
+            btn.classList.add('tag-active');
+
+            // 更新标题
+            document.getElementById('current-tag-label').innerText = `当前展示: ${tag === 'All' ? '全部文章' : tag}`;
+
+            // 过滤列表
+            const items = document.querySelectorAll('.article-item');
+            items.forEach(item => {
+                if (tag === 'All' || item.getAttribute('data-category') === tag) {
+                    item.style.display = 'flex';
+                    item.style.opacity = '0';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transition = 'opacity 0.5s ease';
+                    }, 10);
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // 滚动揭示
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
