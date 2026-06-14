@@ -27,7 +27,7 @@ export default async ({ mode }) => {
   //cleanDist()
   const env = loadEnv(mode)
   return defineConfig({
-    base: env.WEB_BASE_PATH,
+    base: env.WEB_BASE_PATH || '/',
     plugins: [
       vue(),
       vueJsx(),
