@@ -3,7 +3,7 @@
     <RevealSection>
       <header class="cases-header">
         <span class="cases-kicker">Selected Work</span>
-        <h1>案例列表</h1>
+        <h1>案例</h1>
         <p>整理近期完成的产品、品牌官网与中后台项目，聚焦目标、关键动作与结果变化。</p>
       </header>
     </RevealSection>
@@ -38,7 +38,8 @@ import { cases } from '@/data/cases'
 
 <style scoped>
 .cases-page {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 28px;
   max-width: 1040px;
 }
@@ -75,16 +76,27 @@ import { cases } from '@/data/cases'
 }
 
 .cases-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  align-items: flex-start;
+}
+
+.cases-grid > * {
+  flex: 0 0 calc(50% - 10px);
+  display: flex;
+  min-width: 0;
 }
 
 .case-card {
-  height: 100%;
-  display: grid;
-  gap: 14px;
-  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 148px;
+  padding: 20px 22px;
   border: 1px solid rgba(23, 32, 51, 0.06);
   border-radius: 22px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.86)), var(--case-accent, rgba(23, 32, 51, 0.06));
@@ -102,29 +114,45 @@ import { cases } from '@/data/cases'
 }
 
 .case-card h2 {
+  margin: 0;
+  min-height: 55px;
   color: #172033;
   font-size: 22px;
   line-height: 1.25;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .case-highlights {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  flex: 1;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 8px 10px;
+  width: 100%;
 }
 
 .case-highlights span {
-  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 5px 10px;
   border-radius: 999px;
   color: #18a787;
   background: rgba(24, 167, 135, 0.08);
   font-size: 11px;
-  line-height: 1.4;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 960px) {
-  .cases-grid {
-    grid-template-columns: 1fr;
+  .cases-grid > * {
+    flex-basis: 100%;
   }
 }
 
