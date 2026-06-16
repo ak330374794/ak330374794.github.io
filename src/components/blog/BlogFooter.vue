@@ -3,7 +3,7 @@
     <div class="shell-container footer-grid">
       <div>
         <h3 class="footer-title">{{ siteMeta.title }}</h3>
-        <p class="footer-text">© 2026 Alex. All rights reserved.</p>
+        <p class="footer-text">© 2026 {{ siteMeta.author.name }}. All rights reserved.</p>
       </div>
       <div>
         <div class="footer-links">

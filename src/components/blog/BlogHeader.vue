@@ -2,8 +2,11 @@
   <header class="site-header" :class="{ 'is-scrolled': isScrolled }">
     <div class="shell-container header-inner">
       <RouterLink class="brand-mark" to="/home.html">
-        <span class="brand-dot"></span>
-        <strong>{{ siteMeta.name }}</strong>
+        <span class="brand-logo" aria-hidden="true">
+          <span class="brand-logo-ring"></span>
+          <span class="brand-logo-dot"></span>
+        </span>
+        <strong>{{ siteMeta.brandName || siteMeta.name }}</strong>
       </RouterLink>
 
       <button

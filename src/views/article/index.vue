@@ -2,7 +2,7 @@
   <div v-if="article" class="article-page shell-container">
     <RevealSection>
       <section class="article-topbar">
-        <span>FOLIO.</span>
+        <span>{{ siteMeta.name }}</span>
         <RouterLink to="/articles.html">返回文章</RouterLink>
       </section>
     </RevealSection>
@@ -16,7 +16,7 @@
         <h1>{{ article.title }}</h1>
         <div class="author-chip">
           <span class="author-dot"></span>
-          <span>Alex Chen</span>
+          <span>{{ siteMeta.author.name }}</span>
         </div>
         <img :src="heroVisual" :alt="article.title" class="article-visual" />
         <p class="article-intro">{{ article.excerpt }}</p>
@@ -62,6 +62,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import RevealSection from '@/components/blog/RevealSection.vue'
 import { articles } from '@/data/articles'
+import { siteMeta } from '@/data/site'
 import { getRecommendedArticles } from '@/utils/blog'
 
 const route = useRoute()

@@ -1,15 +1,16 @@
 export const siteMeta = {
-  name: 'FOLIO.',
-  title: 'FOLIO.',
-  subtitle: 'Minimal Editorial Journal',
+  brandName: 'Annn',
+  name: 'Annn',
+  title: 'Annn',
+  subtitle: 'Annn',
   description: '记录设计、技术与写作，保持轻盈、克制与长期更新。',
   heroKicker: 'WELCOME TO MY SPACE',
   heroTitle: '思考、记录与创造的边界',
-  heroDescription: '我是 Alex，专注于前端与内容表达。这里写技术探索、设计灵感，以及关于数字世界的价值、提示和偏见。',
+  heroDescription: '我是 Annn，专注于前端与内容表达。这里写技术探索、设计灵感，以及关于数字世界的价值、提示和偏见。',
   heroPrimaryText: '阅读文章',
   heroSecondaryText: '了解更多',
   author: {
-    name: 'Alex Chen',
+    name: 'Annn',
     role: '数字产品设计师 / 前端开发者 / 写作者',
     city: 'Shanghai, CN',
     intro: '关注前端体验、内容表达和轻量工作流，偏爱安静、清晰且富有秩序的页面气质。',
@@ -18,6 +19,7 @@ export const siteMeta = {
 
 export const navItems = [
   { label: '首页', to: '/home.html' },
+  { label: '案例', to: '/cases.html' },
   { label: '文章', to: '/articles.html' },
   { label: '归档', to: '/archive.html' },
   { label: '标签', to: '/tags.html' },
