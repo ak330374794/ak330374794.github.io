@@ -22,7 +22,23 @@ import BlogHeader from '@/components/blog/BlogHeader.vue'
 
 const isReady = ref(false)
 const route = useRoute()
-const isStandaloneRoute = computed(() => route.path.startsWith('/news/') || route.path.startsWith('/commerce/'))
+const standalonePrefixes = [
+  '/news/',
+  '/commerce/',
+  '/social/',
+  '/finder/',
+  '/entertainment/',
+  '/workstudy/',
+  '/lifeservice/',
+  '/corporate/',
+  '/finance/',
+  '/medical/',
+  '/housing/',
+  '/gov/',
+  '/sports/',
+  '/devtech/',
+]
+const isStandaloneRoute = computed(() => standalonePrefixes.some((prefix) => route.path.startsWith(prefix)))
 
 onMounted(() => {
   nextTick(() => {

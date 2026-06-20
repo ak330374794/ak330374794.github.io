@@ -340,4 +340,74 @@ const floorSections = computed(() =>
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 768px) {
+  .commerce-home {
+    gap: 14px;
+  }
+
+  .category-panel {
+    padding: 8px;
+  }
+
+  .category-panel a {
+    padding: 12px 10px;
+  }
+
+  .hero-copy {
+    padding: 18px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .hero-image {
+    min-height: 220px;
+  }
+
+  .board-card,
+  .panel {
+    padding: 16px;
+  }
+
+  .panel-head {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .cross-card {
+    grid-template-columns: 96px 1fr;
+  }
+
+  .cross-card img {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-copy {
+    padding: 16px;
+  }
+
+  .hero-tags {
+    gap: 8px;
+  }
+
+  .cross-card,
+  .brand-card {
+    padding: 12px;
+  }
+
+  .cross-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cross-card img {
+    width: 100%;
+    height: 180px;
+  }
+}
 </style>

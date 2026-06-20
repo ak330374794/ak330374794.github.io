@@ -585,5 +585,60 @@ const getArticleImage = () => 'https://picsum.photos/400'
   .hero-main {
     padding: 24px;
   }
+
+  .section-head,
+  .hero-actions,
+  .creator-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-primary,
+  .hero-secondary {
+    width: 100%;
+  }
+
+  .headline-card,
+  .story-card,
+  .panel {
+    padding: 16px;
+  }
+
+  .flash-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .feed-image {
+    width: 100%;
+    min-height: 180px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 640px) {
+  .news-home {
+    gap: 12px;
+    padding-top: 12px;
+  }
+
+  .hero-main {
+    padding: 18px;
+  }
+
+  .hero-main h1 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .headline-card h3,
+  .story-card h3,
+  .video-card h3 {
+    font-size: 18px;
+  }
+
+  .ranking-item,
+  .creator-card {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

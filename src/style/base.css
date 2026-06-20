@@ -1087,3 +1087,585 @@ img {
     letter-spacing: -0.05em;
   }
 }
+
+.dev-header,
+.sports-header,
+.gov-header,
+.hs-header,
+.med-header,
+.finance-header,
+.corp-header,
+.ls-header,
+.ws-header,
+.ent-header,
+.finder-header,
+.social-header,
+.news-header,
+.commerce-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 60 !important;
+}
+
+@media (max-width: 960px) {
+  .dev-shell,
+  .sports-shell,
+  .gov-shell,
+  .hs-shell,
+  .med-shell,
+  .finance-shell,
+  .corp-shell,
+  .ls-shell,
+  .ws-shell,
+  .ent-shell,
+  .finder-shell,
+  .social-shell,
+  .news-shell,
+  .commerce-shell,
+  .shell {
+    width: min(calc(100vw - 24px), 1280px) !important;
+  }
+
+  .dev-main,
+  .sports-main,
+  .gov-main,
+  .hs-main,
+  .med-main,
+  .finance-main,
+  .corp-main,
+  .ls-main,
+  .ws-main,
+  .ent-main,
+  .finder-main,
+  .social-main,
+  .commerce-main {
+    padding: 14px 0 40px !important;
+  }
+
+  .news-main {
+    padding: 0 0 40px !important;
+  }
+
+  .dev-header .top-row,
+  .sports-header .top-row,
+  .gov-header .top-row,
+  .hs-header .top-row,
+  .med-header .top-row,
+  .finance-header .top-row,
+  .corp-header .top-row,
+  .ls-header .top-row,
+  .ws-header .top-row,
+  .ent-header .top-row,
+  .finder-header .top-row,
+  .social-header .top-row,
+  .commerce-header .top-inner,
+  .news-header .news-header-main {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 14px 0;
+  }
+
+  .dev-header .brand,
+  .sports-header .brand,
+  .gov-header .brand,
+  .hs-header .brand,
+  .med-header .brand,
+  .finance-header .brand,
+  .corp-header .brand,
+  .ls-header .brand,
+  .ws-header .brand,
+  .ent-header .brand,
+  .finder-header .brand,
+  .social-header .brand,
+  .commerce-header .brand,
+  .news-header .news-brand {
+    min-width: 0;
+  }
+
+  .dev-header .brand strong,
+  .sports-header .brand strong,
+  .gov-header .brand strong,
+  .hs-header .brand strong,
+  .med-header .brand strong,
+  .finance-header .brand strong,
+  .corp-header .brand strong,
+  .ls-header .brand strong,
+  .ws-header .brand strong,
+  .ent-header .brand strong,
+  .finder-header .brand strong,
+  .social-header .brand strong,
+  .commerce-header .brand strong,
+  .news-header .news-brand strong {
+    font-size: clamp(24px, 7vw, 32px);
+  }
+
+  .dev-header .search-box,
+  .sports-header .search-box,
+  .gov-header .search-box,
+  .hs-header .search-box,
+  .med-header .search-box,
+  .finance-header .search-box,
+  .corp-header .search-box,
+  .ls-header .search-box,
+  .ws-header .search-box,
+  .ent-header .search-box,
+  .finder-header .search-box,
+  .social-header .search-box,
+  .commerce-header .search-box,
+  .news-header .news-search,
+  .dev-header .header-actions,
+  .sports-header .header-actions,
+  .gov-header .header-actions,
+  .hs-header .header-actions,
+  .med-header .header-actions,
+  .finance-header .header-actions,
+  .corp-header .header-actions,
+  .ls-header .header-actions,
+  .ws-header .header-actions,
+  .ent-header .header-actions,
+  .finder-header .header-actions,
+  .social-header .header-actions,
+  .commerce-header .header-actions,
+  .news-header .news-actions {
+    flex-basis: 100%;
+    width: 100%;
+    max-width: none;
+  }
+
+  .dev-header .search-box,
+  .sports-header .search-box,
+  .gov-header .search-box,
+  .hs-header .search-box,
+  .med-header .search-box,
+  .finance-header .search-box,
+  .corp-header .search-box,
+  .ls-header .search-box,
+  .ws-header .search-box,
+  .ent-header .search-box,
+  .finder-header .search-box,
+  .social-header .search-box,
+  .commerce-header .search-box {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .dev-header .search-box button,
+  .sports-header .search-box button,
+  .gov-header .search-box button,
+  .hs-header .search-box button,
+  .med-header .search-box button,
+  .finance-header .search-box button,
+  .corp-header .search-box button,
+  .ls-header .search-box button,
+  .ws-header .search-box button,
+  .ent-header .search-box button,
+  .finder-header .search-box button,
+  .social-header .search-box button,
+  .commerce-header .search-box button {
+    min-width: 88px;
+    white-space: nowrap;
+  }
+
+  .dev-header .header-actions,
+  .sports-header .header-actions,
+  .gov-header .header-actions,
+  .hs-header .header-actions,
+  .med-header .header-actions,
+  .finance-header .header-actions,
+  .corp-header .header-actions,
+  .ls-header .header-actions,
+  .ws-header .header-actions,
+  .ent-header .header-actions,
+  .finder-header .header-actions,
+  .social-header .header-actions,
+  .commerce-header .header-actions,
+  .news-header .news-actions {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .news-header .news-search {
+    order: 3;
+  }
+
+  .dev-header .nav-row,
+  .sports-header .nav-row,
+  .gov-header .nav-row,
+  .hs-header .nav-row,
+  .med-header .nav-row,
+  .finance-header .nav-row,
+  .corp-header .nav-row,
+  .ls-header .nav-row,
+  .ws-header .nav-row,
+  .ent-header .nav-row,
+  .finder-header .nav-row,
+  .social-header .nav-row,
+  .commerce-header .nav-inner,
+  .news-header .channel-bar-inner {
+    min-height: 44px;
+  }
+
+  .dev-header .nav-list,
+  .sports-header .nav-list,
+  .gov-header .nav-list,
+  .hs-header .nav-list,
+  .med-header .nav-list,
+  .finance-header .nav-list,
+  .corp-header .nav-list,
+  .ls-header .nav-list,
+  .ws-header .nav-list,
+  .ent-header .nav-list,
+  .finder-header .nav-list,
+  .social-header .nav-list,
+  .commerce-header .nav-list,
+  .news-header .news-nav {
+    gap: 16px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .dev-header .nav-list::-webkit-scrollbar,
+  .sports-header .nav-list::-webkit-scrollbar,
+  .gov-header .nav-list::-webkit-scrollbar,
+  .hs-header .nav-list::-webkit-scrollbar,
+  .med-header .nav-list::-webkit-scrollbar,
+  .finance-header .nav-list::-webkit-scrollbar,
+  .corp-header .nav-list::-webkit-scrollbar,
+  .ls-header .nav-list::-webkit-scrollbar,
+  .ws-header .nav-list::-webkit-scrollbar,
+  .ent-header .nav-list::-webkit-scrollbar,
+  .finder-header .nav-list::-webkit-scrollbar,
+  .social-header .nav-list::-webkit-scrollbar,
+  .commerce-header .nav-list::-webkit-scrollbar,
+  .news-header .news-nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .dev-shell,
+  .sports-shell,
+  .gov-shell,
+  .hs-shell,
+  .med-shell,
+  .finance-shell,
+  .corp-shell,
+  .ls-shell,
+  .ws-shell,
+  .ent-shell,
+  .finder-shell,
+  .social-shell,
+  .news-shell,
+  .commerce-shell,
+  .shell {
+    width: min(calc(100vw - 20px), 1280px) !important;
+  }
+
+  .dev-header .search-box,
+  .sports-header .search-box,
+  .gov-header .search-box,
+  .hs-header .search-box,
+  .med-header .search-box,
+  .finance-header .search-box,
+  .corp-header .search-box,
+  .ls-header .search-box,
+  .ws-header .search-box,
+  .ent-header .search-box,
+  .finder-header .search-box,
+  .social-header .search-box,
+  .commerce-header .search-box {
+    grid-template-columns: 1fr;
+  }
+
+  .dev-header .search-box button,
+  .sports-header .search-box button,
+  .gov-header .search-box button,
+  .hs-header .search-box button,
+  .med-header .search-box button,
+  .finance-header .search-box button,
+  .corp-header .search-box button,
+  .ls-header .search-box button,
+  .ws-header .search-box button,
+  .ent-header .search-box button,
+  .finder-header .search-box button,
+  .social-header .search-box button,
+  .commerce-header .search-box button {
+    min-height: 42px;
+  }
+
+  .hero,
+  .hero-panel,
+  .content-grid,
+  .main-grid,
+  .board-grid,
+  .left-column,
+  .right-column,
+  .service-grid,
+  .market-strip,
+  .stats-row,
+  .tools-grid,
+  .feature-grid,
+  .info-grid,
+  .insurance-grid,
+  .query-grid,
+  .course-grid,
+  .quick-grid,
+  .schedule-strip,
+  .service-strip,
+  .news-strip,
+  .channel-strip,
+  .community-strip,
+  .product-strip,
+  .category-strip,
+  .mode-strip,
+  .feature-list,
+  .nav-category-list,
+  .wealth-list,
+  .insurance-list,
+  .records-list,
+  .feed-list,
+  .club-list,
+  .topic-list,
+  .flow-list,
+  .release-list,
+  .shortcut-list,
+  .watchlist,
+  .advisory-list,
+  .status-meta,
+  .hero-tags,
+  .plan-meta,
+  .challenge-meta,
+  .console-metrics {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero,
+  .hero-panel,
+  .profile,
+  .profile-hero,
+  .news-header .news-header-main {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .hero-copy,
+  .hero-dashboard,
+  .section-panel,
+  .main-panel,
+  .side-panel,
+  .progress-card,
+  .checklist-card,
+  .plan-card,
+  .challenge-card,
+  .feed-panel,
+  .status-card,
+  .records-card,
+  .console-card,
+  .workspace-card,
+  .policy-card,
+  .asset-card,
+  .hero-side {
+    padding: 18px !important;
+  }
+
+  .panel,
+  .ticker-card,
+  .stats-card,
+  .knowledge-card,
+  .result-card,
+  .feature-card,
+  .nav-category-card,
+  .insurance-card,
+  .wealth-card,
+  .info-card,
+  .query-card,
+  .topic-item,
+  .scene-item,
+  .claim-item,
+  .shortcut-item,
+  .watch-item,
+  .advisory-item,
+  .feed-item,
+  .club-item,
+  .record-item,
+  .check-item,
+  .status-card,
+  .schedule-card,
+  .service-card,
+  .news-card,
+  .category-card,
+  .community-card,
+  .product-card,
+  .quick-card,
+  .channel-card,
+  .mode-card {
+    border-radius: 18px !important;
+  }
+
+  .panel-head,
+  .record-item,
+  .watch-item {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .panel-head {
+    gap: 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .hero-copy h1,
+  .hero-panel h1,
+  .profile-copy h1,
+  h1 {
+    font-size: clamp(28px, 9vw, 40px) !important;
+    line-height: 1.12 !important;
+  }
+
+  .panel-head h2,
+  h2 {
+    font-size: 22px !important;
+  }
+
+  .ticker-card strong,
+  .asset-card strong,
+  .policy-card strong,
+  .progress-card strong,
+  .challenge-card strong,
+  .workspace-card strong,
+  .hero-side strong,
+  .status-card strong,
+  .market-chip strong,
+  .news-card strong {
+    font-size: 24px !important;
+  }
+
+  .hero-copy p,
+  .hero-panel p,
+  .profile-copy p,
+  p {
+    font-size: 14px !important;
+    line-height: 1.75 !important;
+  }
+
+  .search-bar,
+  .hero-search,
+  .search-strip {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+  }
+
+  .search-bar button,
+  .hero-search button,
+  .search-strip button,
+  .hero-actions a,
+  .hero-toolbar button,
+  button {
+    width: 100%;
+  }
+
+  .hero-actions,
+  .hero-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions a {
+    min-height: 42px !important;
+  }
+
+  .hero-image,
+  .rental-cover,
+  .house-cover {
+    min-height: 220px !important;
+  }
+
+  .asset-card {
+    position: static !important;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .dev-shell,
+  .sports-shell,
+  .gov-shell,
+  .hs-shell,
+  .med-shell,
+  .finance-shell,
+  .corp-shell,
+  .ls-shell,
+  .ws-shell,
+  .ent-shell,
+  .finder-shell,
+  .social-shell,
+  .news-shell,
+  .commerce-shell,
+  .shell {
+    width: min(calc(100vw - 16px), 1280px) !important;
+  }
+
+  .hero,
+  .hero-panel,
+  .profile,
+  .profile-hero,
+  .panel,
+  .section-panel,
+  .main-panel,
+  .side-panel {
+    border-radius: 20px !important;
+  }
+
+  .hero,
+  .hero-panel,
+  .profile,
+  .profile-hero {
+    padding: 16px !important;
+  }
+
+  .hero-copy,
+  .hero-dashboard,
+  .section-panel,
+  .main-panel,
+  .side-panel,
+  .progress-card,
+  .checklist-card,
+  .plan-card,
+  .challenge-card,
+  .feed-panel,
+  .status-card,
+  .records-card,
+  .console-card,
+  .workspace-card,
+  .policy-card,
+  .asset-card,
+  .hero-side {
+    padding: 16px !important;
+  }
+
+  .hero-copy h1,
+  .hero-panel h1,
+  .profile-copy h1,
+  h1 {
+    font-size: clamp(24px, 8vw, 34px) !important;
+  }
+
+  .panel-head h2,
+  h2 {
+    font-size: 20px !important;
+  }
+
+  .hero-tags span,
+  .plan-meta span,
+  .challenge-meta span,
+  .policy-meta span,
+  .workspace-metrics span,
+  .hero-toolbar span,
+  .site-tags span,
+  .hot-list span {
+    width: 100%;
+  }
+}
